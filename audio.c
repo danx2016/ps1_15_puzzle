@@ -30,24 +30,24 @@ static int32_t audio_play_next_sample(void)
 
 void audio_init(void)
 {
-	// init spu
-	SpuInit();
-	SpuSetCommonMasterVolume(0x3fff, 0x3fff);
-	SpuInitMalloc (SPU_MALLOC_MAX, spu_malloc_rec);
+    // init spu
+    SpuInit();
+    SpuSetCommonMasterVolume(0x3fff, 0x3fff);
+    SpuInitMalloc (SPU_MALLOC_MAX, spu_malloc_rec);
 
     // xm player
-	XM_OnceOffInit(XM_PAL);
-	XM_SetMono();
-	
-	// allocate buffer for the xm header and set the address
-	int32_t xm_header_size = XM_GetFileHeaderSize();
-	xm_header_addr = (uint8_t*) mem_alloc(xm_header_size);
-	XM_SetFileHeaderAddress(xm_header_addr);
-	
-	// allocate buffer for the song and set the address
-	int32_t song_size = XM_GetSongSize();
-	xm_addr = (uint8_t*) mem_alloc(song_size);
-	XM_SetSongAddress(xm_addr);
+    XM_OnceOffInit(XM_PAL);
+    XM_SetMono();
+
+    // allocate buffer for the xm header and set the address
+    int32_t xm_header_size = XM_GetFileHeaderSize();
+    xm_header_addr = (uint8_t*) mem_alloc(xm_header_size);
+    XM_SetFileHeaderAddress(xm_header_addr);
+
+    // allocate buffer for the song and set the address
+    int32_t song_size = XM_GetSongSize();
+    xm_addr = (uint8_t*) mem_alloc(song_size);
+    XM_SetSongAddress(xm_addr);
 
     // setup the root counter 2 interruption handler to play 
     // xm musics at correct timing regardless of ntsc/pal video mode
