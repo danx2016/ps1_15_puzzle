@@ -5,6 +5,8 @@
 *.ps-exe
 *.dep
 *.o
-*.a
+*.DAT
+*.bin
+*.cue
 PSX.Dev-README.md
 third_party/psyq

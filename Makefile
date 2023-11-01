@@ -2,11 +2,27 @@
 TARGET = ps1_15_puzzle
 TYPE = ps-exe
 
-SRCS = third_party/nugget/common/crt0/crt0.s main.c
+SRCS = third_party/nugget/common/crt0/crt0.s \
+main.c \
+game.c \
+mem.c \
+input.c \
+gfx.c \
+alpha.c \
+res.c \
+font.c \
+audio.c \
+puzzle.c \
+scene_manager.c \
+scene_init.c \
+scene_title.c \
+scene_playing.c \
 
 CPPFLAGS += -Ithird_party/psyq-iwyu/include
 LDFLAGS += -Lthird_party/psyq/lib
+LDFLAGS += -Lxmplay
 LDFLAGS += -Wl,--start-group
+LDFLAGS += -l:xmplay.a
 LDFLAGS += -lapi
 LDFLAGS += -lc
 LDFLAGS += -lc2

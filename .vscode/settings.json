@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "libpad.h": "c",
+        "libds.h": "c",
+        "libapi.h": "c",
+        "memory.h": "c",
+        "stdio.h": "c",
+        "stddef.h": "c",
+        "libgpu.h": "c",
+        "gfx.h": "c",
+        "compare": "c",
+        "cstdint": "c",
+        "scene_factory.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
