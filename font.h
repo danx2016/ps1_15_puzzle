@@ -26,7 +26,7 @@ typedef struct
 } FONT_CHAR;
 
 typedef struct
-{
+	{
 	uint16_t line_height;
 	uint16_t base;
 	uint16_t width;
