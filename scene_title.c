@@ -80,7 +80,7 @@ static void scene_title_render(void)
     gfx_use_tileset(GAME_TILESET_ID_TITLE); 
 
     // draw title
-    alpha_draw(0, 24, 32, title_oppacity);
+    alpha_draw(GAME_ALPHA_ID_TITLE, 24, 32, title_oppacity);
 }
 
 SCENE* scene_title_create(void)
