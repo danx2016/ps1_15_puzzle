@@ -5,7 +5,7 @@ Very simple Fifteen Puzzle game implementation for PS1 using MIPS toolchain + Nu
 
 ## Binary CD BIN/CUE ##
 
-* You can download the latest binary CD BIN/CUE here: https://github.com/danx2016/ps1_15_puzzle/releases/tag/v0.0.1
+* You can download the latest binary CD BIN/CUE here: https://github.com/danx2016/ps1_15_puzzle/releases/tag/v0.0.2
 
 
 ## How to Build ##
