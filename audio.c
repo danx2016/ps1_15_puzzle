@@ -69,6 +69,7 @@ void audio_add_music(size_t music_id, uint8_t *vb, uint8_t *vh, uint8_t *xm)
 void audio_play_music(size_t music_id)
 {
     DisableEvent(rcnt2_evt);
+    audio_stop_music();
     InitXMData(xms[music_id], 0, XM_UseXMPanning);
     XM_Init(vab_ids[music_id], 0, 0, 0, XM_Loop, -1, XM_Music, 0); 	
     EnableEvent(rcnt2_evt);
